@@ -29,6 +29,7 @@ function toggleDropdown(event: any) {
         <span>Дэшборд</span>
       </RouterLink>
     </li>
+    tets
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -71,6 +72,7 @@ function toggleDropdown(event: any) {
             </RouterLink>
           </li>
         </div>
+
         <div class="subMenuToolTip">
           <li v-for="(child, index) in item.children" :key="index">
             <RouterLink
@@ -145,7 +147,7 @@ function toggleDropdown(event: any) {
 .menuLink:hover,
 .menuLink.active {
   color: #fff;
-  background-color: #000;
+  background-color: #0656C8;
 }
 
 .menuIcon {

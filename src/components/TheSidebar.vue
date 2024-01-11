@@ -40,9 +40,12 @@ function logOut() {
     <TheMenu />
     <button class="logOutBtn" @click="logOut">Выйти</button>
   </aside>
+  <aside class="sidebarMobile">
+    MobileSidebar
+  </aside>
 </template>
 
-<style>
+<style lang="scss">
 .sideBar {
   position: fixed;
   top: 0;
@@ -56,6 +59,17 @@ function logOut() {
   transition: all 0.2s linear;
   border-right: 2px solid #f5f5f5;
   z-index: 11;
+
+  @media (max-width: 600px) {
+      display: none;
+  } 
+}
+
+.sidebarMobile{
+  display: none;
+  @media (max-width: 600px) {
+      display: block;
+  }
 }
 
 .sideBarLogo {
