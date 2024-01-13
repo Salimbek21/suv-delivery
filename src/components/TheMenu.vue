@@ -19,7 +19,7 @@ function toggleDropdown(event: any) {
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/' && 'active' "
+        :class="router.currentRoute.value.path == '/' && 'active'"
         to="/"
         w-full
         flex
@@ -147,7 +147,7 @@ function toggleDropdown(event: any) {
 .menuLink:hover,
 .menuLink.active {
   color: #fff;
-  background-color: #0656C8;
+  background-color: #0656c8;
 }
 
 .menuIcon {
