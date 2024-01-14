@@ -29,7 +29,6 @@ function toggleDropdown(event: any) {
         <span>Дэшборд</span>
       </RouterLink>
     </li>
-    tets
     <li class="menuItem">
       <RouterLink
         class="menuLink"
