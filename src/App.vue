@@ -15,6 +15,9 @@ onBeforeMount(async () => {
     <div class="content">
       <RouterView />
     </div>
+    <div class="downMenuContainer">
+      <TheMenu />
+      </div>
   </div>
   <div v-else>
     <RouterView />
@@ -36,5 +39,35 @@ onBeforeMount(async () => {
 
 body.sideBarClose .content {
   margin-left: 96px;
+}
+
+.downMenuContainer {
+  display: none;
+}
+
+
+
+@media screen and (max-width:600px) {
+  .content {
+  position: relative;
+  margin-left: 0px;
+  padding: 40px 20px 20px;
+  transition: all 0.2s linear;
+  z-index: 10;
+}
+
+body.sideBarClose .content {
+  margin-left: 0px;
+}
+
+.downMenuContainer {
+  width: 90%;
+  display:block ;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+}
 }
 </style>

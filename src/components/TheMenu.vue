@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-const router = useRouter()
-const permissions = localStorage.getItem('permissions')
-const result = filterByPermission(menu, permissions)
+const router = useRouter();
+const permissions = localStorage.getItem("permissions");
+const result = filterByPermission(menu, permissions);
 
 function filterByPermission(menu: any, permissions: any) {
-  return menu.filter((item: any) => permissions?.includes(item?.permission))
+  return menu.filter((item: any) => permissions?.includes(item?.permission));
 }
 
 function toggleDropdown(event: any) {
-  event.currentTarget.classList.toggle('opened')
-  event.currentTarget.parentElement.classList.toggle('opened')
+  event.currentTarget.classList.toggle("opened");
+  event.currentTarget.parentElement.classList.toggle("opened");
 }
 </script>
 
@@ -19,14 +19,14 @@ function toggleDropdown(event: any) {
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/' && 'active' "
+        :class="router.currentRoute.value.path == '/' && 'active'"
         to="/"
         w-full
         flex
         items-center
       >
         <i class="menuIcon iconDashboard"></i>
-        <span>Дэшборд</span>
+        <p>Дэшборд</p>
       </RouterLink>
     </li>
     <li class="menuItem">
@@ -38,8 +38,34 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconReports"></i>
-        <span>product</span>
+        <i class="menuIcon iconProduct"></i>
+        <p>product</p>
+      </RouterLink>
+    </li>
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/order' && 'active'"
+        to="/order"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDownload"></i>
+        <p>order</p>
+      </RouterLink>
+    </li>
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/homePage' && 'active'"
+        to="/homePage"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconHome"></i>
+        <p>home</p>
       </RouterLink>
     </li>
     <div v-for="(item, index) in result" :key="index">
@@ -59,7 +85,9 @@ function toggleDropdown(event: any) {
           <li v-for="(child, index) in item.children" :key="index">
             <RouterLink
               class="subMenuLink"
-              :class="router.currentRoute.value.path.includes(child.path) ? 'active' : null"
+              :class="
+                router.currentRoute.value.path.includes(child.path) ? 'active' : null
+              "
               :to="child.path"
               w-full
               flex
@@ -74,7 +102,9 @@ function toggleDropdown(event: any) {
         <div class="subMenuToolTip">
           <li v-for="(child, index) in item.children" :key="index">
             <RouterLink
-              :class="router.currentRoute.value.path.includes(child.path) ? 'active' : null"
+              :class="
+                router.currentRoute.value.path.includes(child.path) ? 'active' : null
+              "
               :to="child.path"
               w-full
               flex
@@ -106,7 +136,9 @@ function toggleDropdown(event: any) {
           <div class="subMenuToolTip">
             <li>
               <RouterLink
-                :class="router.currentRoute.value.path.includes(item.path) ? 'active' : null"
+                :class="
+                  router.currentRoute.value.path.includes(item.path) ? 'active' : null
+                "
                 :to="item.path"
                 w-full
                 flex
@@ -134,26 +166,36 @@ function toggleDropdown(event: any) {
   align-items: center;
   font-size: 16px;
   font-weight: normal;
-  color: #000;
+  color: #0657c9;
   padding: 0 10px;
   border-radius: 10px;
   height: 44px;
   position: relative;
   transition: all 0.2s linear;
 }
+.menuItem > .menuLink > p {
+  color: #444;
+text-align: center;
+font-family: 'Gilroy';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  text-transform: capitalize;
+}
 
 .menuLink:hover,
 .menuLink.active {
   color: #fff;
-  background-color: #000;
+  background-color: #0657c9;
 }
 
 .menuIcon {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   flex: none;
   margin-right: 10px;
-  background-color: #000;
+  background-color: #444;
   transition: all 0.2s linear;
 }
 
@@ -162,39 +204,56 @@ function toggleDropdown(event: any) {
   background-color: #fff;
 }
 
+.menuLink:hover .menuItem .menuLink > p,
+.menuLink.active .menuItem .menuLink > p {
+  color: #fff!important;
+}
+
 .menuIcon.iconDashboard {
-  -webkit-mask: url('/src/assets/icons/menu/dashboard.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/menu/dashboard.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/dashboard.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/dashboard.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconReports {
-  -webkit-mask: url('/src/assets/icons/menu/reports.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/menu/reports.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/reports.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/reports.svg") no-repeat center/100%;
+}
+.menuIcon.iconProduct {
+  -webkit-mask: url("/src/assets/icons/menu/product.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/product.svg") no-repeat center/100%;
+}
+.menuIcon.iconDownload {
+  -webkit-mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
+}
+.menuIcon.iconHome {
+  -webkit-mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconRegistration {
-  -webkit-mask: url('/src/assets/icons/menu/registration.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/menu/registration.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/registration.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/registration.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconRoles {
-  -webkit-mask: url('/src/assets/icons/menu/roles.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/menu/roles.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/roles.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/roles.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconStaffs {
-  -webkit-mask: url('/src/assets/icons/menu/staffs.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/menu/staffs.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/staffs.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/staffs.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconNotification {
-  -webkit-mask: url('/src/assets/icons/menu/notification.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/menu/notification.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/notification.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/notification.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconDiscount {
-  -webkit-mask: url('/src/assets/icons/menu/discounts.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/menu/discounts.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/discounts.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/discounts.svg") no-repeat center/100%;
 }
 
 /* sub menu */
@@ -213,7 +272,7 @@ function toggleDropdown(event: any) {
   align-items: center;
   font-size: 16px;
   font-weight: normal;
-  color: #000;
+  color: #0657c9;
   height: 44px;
   width: 100%;
   padding: 0 10px;
@@ -226,7 +285,7 @@ function toggleDropdown(event: any) {
 
 .subMenuToggle:hover,
 .subMenu.opened .subMenuToggle {
-  background-color: #000;
+  background-color: #0657c9;
   color: #fff;
 }
 
@@ -234,6 +293,10 @@ function toggleDropdown(event: any) {
 .subMenu.opened .menuIcon {
   background-color: #fff;
 }
+
+/* .subMenu.opened .menuIcon,.menuItem > .menuLink > p {
+  color: #fff;
+} */
 
 .subMenuItems {
   position: relative;
@@ -248,14 +311,14 @@ function toggleDropdown(event: any) {
 }
 
 .subMenuItems::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   bottom: 0;
   left: 17px;
   height: calc(100% - 10px);
   width: 1px;
-  background-color: #000;
+  background-color: #0657c9;
 }
 
 .subMenuItems a {
@@ -277,7 +340,7 @@ function toggleDropdown(event: any) {
 }
 
 .subMenuItems a::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 17px;
   width: 10px;
@@ -300,8 +363,8 @@ function toggleDropdown(event: any) {
   width: 14px;
   height: 14px;
   flex: 0 0 14px;
-  -webkit-mask: url('/src/assets/icons/top.svg') no-repeat center/100%;
-  -mask: url('/src/assets/icons/top.svg') no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/top.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/top.svg") no-repeat center/100%;
   background-color: #000;
   margin-left: auto;
   transform: rotate(90deg);
@@ -362,8 +425,7 @@ body.sideBarClose .subMenu.opened .subMenuItems {
   width: 160px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow:
-    0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
     0px 20px 24px -4px rgba(16, 24, 40, 0.08);
   transition: all 0.2s linear;
 }
@@ -400,4 +462,72 @@ body.sideBarClose .subMenuToolTip li a.active {
   background-color: #000;
   color: #ffffff;
 }
+
+ @media screen and (max-width: 600px) {
+  .menu {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 40px;
+    background: rgba(245, 245, 245, 0.5);
+    backdrop-filter: blur(20px);
+  }
+
+  .cursor-pointer {
+    display: none;
+  }
+.menuItem {
+  width:25% ;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px !important;
+}
+.menuLink {
+  width:100% ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 0;
+}
+
+
+.menuIcon {
+  display: flex;
+width: 24px;
+height: 24px;
+padding: 3.395px 2.628px 3.628px 2.872px;
+margin-right: 0px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+
+/* .menuLink>i {
+  display: flex;
+width: 24px;
+height: 24px;
+padding: 3.395px 2.628px 3.628px 2.872px;
+margin-right: 0px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+} */
+
+.menuItem > .menuLink > p {
+  color: #444;
+text-align: center;
+font-family: 'Gilroy';
+font-size: 10px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+} 
+
+
 </style>
