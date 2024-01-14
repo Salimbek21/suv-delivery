@@ -40,9 +40,7 @@ function logOut() {
     <TheMenu />
     <button class="logOutBtn" @click="logOut">Выйти</button>
   </aside>
-  <aside class="sidebarMobile">
-    MobileSidebar
-  </aside>
+  <!-- <aside class="sidebarMobile">MobileSidebar</aside> -->
 </template>
 
 <style lang="scss">
@@ -52,25 +50,25 @@ function logOut() {
   left: 0;
   display: flex;
   flex-direction: column;
-  width: 256px;
+  // width: 256px;
   background-color: #fff;
   height: 100vh;
-  padding: 20px;
+  // padding: 20px;
   transition: all 0.2s linear;
   border-right: 2px solid #f5f5f5;
-  z-index: 11;
+  z-index: 0;
 
   @media (max-width: 600px) {
-      display: none;
-  } 
-}
-
-.sidebarMobile{
-  display: none;
-  @media (max-width: 600px) {
-      display: block;
+    display: none;
   }
 }
+
+// .sidebarMobile {
+//   display: none;
+//   @media (max-width: 600px) {
+//     display: inline-block;
+//   }
+// }
 
 .sideBarLogo {
   display: flex;
@@ -80,7 +78,7 @@ function logOut() {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #f5f5f5;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .sideBarLogo .logo {
