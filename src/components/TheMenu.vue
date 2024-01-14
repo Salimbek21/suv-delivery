@@ -68,6 +68,7 @@ function toggleDropdown(event: any) {
         <p>home</p>
       </RouterLink>
     </li>
+
     <div v-for="(item, index) in result" :key="index">
       <ul
         class="subMenu"
@@ -175,12 +176,12 @@ function toggleDropdown(event: any) {
 }
 .menuItem > .menuLink > p {
   color: #444;
-text-align: center;
-font-family: 'Gilroy';
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  text-align: center;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   text-transform: capitalize;
 }
 
@@ -204,9 +205,11 @@ line-height: normal;
   background-color: #fff;
 }
 
-.menuLink:hover .menuItem .menuLink > p,
-.menuLink.active .menuItem .menuLink > p {
-  color: #fff!important;
+/* <<<<<<<< WHY ????????????????   .menuLink:hover> p >>>>>>>>> */
+
+.menuLink:hover > p,
+.menuLink.active > p {
+  color: #fff !important;
 }
 
 .menuIcon.iconDashboard {
@@ -385,12 +388,21 @@ body.sideBarClose .menuItem {
 }
 
 body.sideBarClose .menuLink {
-  font-size: 0;
-  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  /* padding: 0px; */
+  /* font-size: 0px; */
+  /* padding: 6px; */
+}
+
+/* <<<<<<<<<< When the menu is collapsed, the menu text disappears >>>>>>>>>>> */
+
+body.sideBarClose .menuLink > p {
+  font-size: 0px;
 }
 
 body.sideBarClose .menuIcon {
-  margin-right: 0;
+  margin-right: 0px;
   background-color: #8d8d8d;
 }
 
@@ -463,7 +475,7 @@ body.sideBarClose .subMenuToolTip li a.active {
   color: #ffffff;
 }
 
- @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .menu {
     display: flex;
     flex-direction: row-reverse;
@@ -477,57 +489,76 @@ body.sideBarClose .subMenuToolTip li a.active {
   .cursor-pointer {
     display: none;
   }
-.menuItem {
-  width:25% ;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0px !important;
+  .menuItem {
+    width: 25%;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px !important;
+  }
+  .menuLink {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 0;
+  }
+
+  .menuIcon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 3.395px 2.628px 3.628px 2.872px;
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .menuItem > .menuLink > p {
+    color: #444;
+    text-align: center;
+    font-family: "Gilroy";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  body.sideBarClose .menuLink > p {
+    font-size: 12px;
+  }
 }
-.menuLink {
-  width:100% ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-bottom: 0;
+
+@media screen and (max-width: 430px) {
+  .menuLink:hover,
+  .menuLink.active {
+    /* color: #5f1111!important; */
+    background-color: unset;
+  }
+  .menuLink:hover > p,
+  .menuLink.active > p {
+    color: #0657c9 !important;
+  }
+
+  .menuLink:hover .menuIcon,
+  .menuLink.active .menuIcon {
+    background-color: #0657c9;
+  }
 }
 
-
-.menuIcon {
-  display: flex;
-width: 24px;
-height: 24px;
-padding: 3.395px 2.628px 3.628px 2.872px;
-margin-right: 0px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
+@media screen and (max-width: 350px) {
+  .menuItem > .menuLink > p {
+    color: #444;
+    text-align: center;
+    font-family: "Gilroy";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 }
-
-/* .menuLink>i {
-  display: flex;
-width: 24px;
-height: 24px;
-padding: 3.395px 2.628px 3.628px 2.872px;
-margin-right: 0px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
-} */
-
-.menuItem > .menuLink > p {
-  color: #444;
-text-align: center;
-font-family: 'Gilroy';
-font-size: 10px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-}
-} 
-
-
 </style>

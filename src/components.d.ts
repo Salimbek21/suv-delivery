@@ -13,8 +13,6 @@ declare module 'vue' {
     TabButtons: typeof import('./components/TabButtons.vue')['default']
     TheButton: typeof import('./components/TheButton.vue')['default']
     TheDatePicker: typeof import('./components/TheDatePicker.vue')['default']
-    TheDownbar: typeof import('./components/TheDownbar.vue')['default']
-    TheDownMenu: typeof import('./components/TheDownMenu.vue')['default']
     TheInput: typeof import('./components/TheInput.vue')['default']
     TheMenu: typeof import('./components/TheMenu.vue')['default']
     TheSelect: typeof import('./components/TheSelect.vue')['default']
