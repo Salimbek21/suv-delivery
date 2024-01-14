@@ -18,5 +18,7 @@ declare module 'vue' {
     TheSelect: typeof import('./components/TheSelect.vue')['default']
     TheSidebar: typeof import('./components/TheSidebar.vue')['default']
     TheTable: typeof import('./components/TheTable.vue')['default']
+    TheTopBarLogo: typeof import('./components/TheTopBarLogo.vue')['default']
+    TheUpSideBarLogo: typeof import('./components/TheUpSideBarLogo.vue')['default']
   }
 }

@@ -11,6 +11,9 @@ onBeforeMount(async () => {
 
 <template>
   <div v-if="router.currentRoute.value.path !== '/login'" class="wrapper">
+    <div class="topBarLogo">
+      <TheTopBarLogo />
+      </div>
     <TheSidebar />
     <div class="content">
       <RouterView />
@@ -45,13 +48,29 @@ body.sideBarClose .content {
   display: none;
 }
 
+.topBarLogo{
+   display: none; 
+  }
+
 
 
 @media screen and (max-width:600px) {
+
+  .topBarLogo{
+    width: 90%;
+  display:flex ;
+  margin: 0 auto;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  }
+
   .content {
   position: relative;
   margin-left: 0px;
-  padding: 40px 20px 20px;
+  padding: 75px 20px 20px;
   transition: all 0.2s linear;
   z-index: 10;
 }
