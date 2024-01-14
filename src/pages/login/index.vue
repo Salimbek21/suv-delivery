@@ -46,8 +46,7 @@ onMounted(() => {
 <template>
   <div class="login">
     <div class="loginLeftBlock">
-      <div class="loginCopyright">
-      </div>
+      <div class="loginCopyright"></div>
     </div>
 
     <div class="loginRightBlock">
