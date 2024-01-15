@@ -128,19 +128,45 @@
   </div>
 </template>
 
-<style long="scss">
+<style lang="scss">
+.table_all_container {
+  @media (max-width: 799px) {
+    margin-left: 0;
+  }
+  @media (max-width: 600px) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 .table_title_item {
   font-family: Gilroy;
   font-size: 20px;
   font-weight: 600;
   line-height: 25px;
+  letter-spacing: 0em;
   text-align: left;
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 25px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 20px;
+  }
 }
 
 .table_wrap {
   width: 100%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 12px;
+  font-family: Gilroy;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .table {
@@ -159,8 +185,25 @@
 }
 
 .table_title_btn {
-  font-size: 15px;
-  color: blue;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: rgba(6, 87, 201, 1);
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 25px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+  }
 }
 
 .table_title_btn:hover {
@@ -173,24 +216,97 @@
 
 .table_row th {
   background-color: #ddd;
+  font-family: Gilroy;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: center;
+
   padding: 10px;
+  @media (max-width: 1440px) {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 13px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 13px;
+  }
 }
 
 .table_row th:nth-child(1) {
+  font-family: Gilroy;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: center;
+
   border-top-left-radius: 8px;
+  @media (max-width: 1440px) {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 13px;
+    border-top-left-radius: 12px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 13px;
+    border-top-left-radius: 10px;
+  }
 }
 
 .table_row th:nth-child(4) {
+  font-family: Gilroy;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: center;
+
   border-top-right-radius: 8px;
+  @media (max-width: 1440px) {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 13px;
+    border-top-right-radius: 12px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 13px;
+    border-top-right-radius: 10px;
+  }
 }
 
 .table_row td {
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
   border-bottom: 1px solid rgba(118, 118, 118, 0.708);
   font-weight: 600;
   padding: 20px;
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 20px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+  }
 }
 
 /* ------>Order table sty */
+
 .container_new_order {
   width: 100%;
 }
@@ -199,7 +315,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
 }
 
 .order_title p {
@@ -209,15 +325,44 @@
   line-height: 25px;
   letter-spacing: 0em;
   text-align: left;
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+  }
 }
 
 .order_title button {
-  font-size: 15px;
-  color: blue;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: rgba(6, 87, 201, 1);
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 20px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+  }
 }
 
 .order_title button:hover {
-  font-size: 15px;
+  font-size: 22px;
   color: rgba(0, 0, 156, 0.901);
 }
 
@@ -232,7 +377,6 @@
 .order_list {
   height: 70px;
   display: flex;
-  align-items: left;
   justify-content: space-between;
   border-radius: 15px;
   /* background-color: #ddd; */
@@ -240,7 +384,25 @@
 }
 
 .order_list li {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
   padding: 20px;
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+  }
 }
 
 .order_list li:nth-child(1) {
@@ -249,7 +411,18 @@
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0em;
-  text-align: left;
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+  }
 }
 
 .order_list_itm_wrap {
@@ -275,7 +448,38 @@
   background: rgba(251, 84, 84, 0.05);
   color: #fb5454;
   border-radius: 14px;
+
+  @media (max-width: 1440px) {
+    width: 100px;
+    height: 50px;
+  }
+  @media (max-width: 1024px) {
+    width: 90px;
+    height: 50px;
+  }
 }
+
+.order_buy_icon p {
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 20px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+}
+
 .order_buy_icon li {
   padding: 0;
 }
@@ -289,6 +493,35 @@
   background: rgba(6, 87, 201, 0.05);
   color: #0657c9;
   border-radius: 14px;
+  @media (max-width: 1440px) {
+    width: 100px;
+    height: 50px;
+  }
+  @media (max-width: 1024px) {
+    width: 90px;
+    height: 50px;
+  }
+}
+
+.order_barrel_icon p {
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  @media (max-width: 1440px) {
+    font-family: Gilroy;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 20px;
+  }
+  @media (max-width: 1024px) {
+    font-family: Gilroy;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+  }
 }
 
 .order_barrel_icon li {
