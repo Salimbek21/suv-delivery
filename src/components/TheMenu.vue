@@ -16,6 +16,7 @@ function toggleDropdown(event: any) {
 <template>
   <ul class="menu">
     <li class="cursor-pointer mb-[10px]"></li>
+    <!-- Glavniy -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -25,23 +26,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
-        <p>Дэшборд</p>
+        <i class="menuIcon iconHome"></i>
+        <p>Главная</p>
       </RouterLink>
     </li>
-    <li class="menuItem">
-      <RouterLink
-        class="menuLink"
-        :class="router.currentRoute.value.path == '/product' && 'active'"
-        to="/product"
-        w-full
-        flex
-        items-center
-      >
-        <i class="menuIcon iconProduct"></i>
-        <p>product</p>
-      </RouterLink>
-    </li>
+    <!-- Zakaz -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -52,20 +41,35 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconDownload"></i>
-        <p>order</p>
+        <p>Заказы</p>
       </RouterLink>
     </li>
+    <!-- Produkta -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/homePage' && 'active'"
-        to="/homePage"
+        :class="router.currentRoute.value.path == '/product' && 'active'"
+        to="/product"
         w-full
         flex
         items-center
       >
-        <i class="menuIcon iconHome"></i>
-        <p>home</p>
+        <i class="menuIcon iconProduct"></i>
+        <p>Продукты</p>
+      </RouterLink>
+    </li>
+    <!-- Menyu -->
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        to="/menu"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>Меню</p>
       </RouterLink>
     </li>
 
@@ -478,12 +482,12 @@ body.sideBarClose .subMenuToolTip li a.active {
 @media screen and (max-width: 600px) {
   .menu {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 40px;
     background: rgba(245, 245, 245, 0.5);
     backdrop-filter: blur(20px);
+    z-index: 1;
   }
 
   .cursor-pointer {
@@ -491,7 +495,7 @@ body.sideBarClose .subMenuToolTip li a.active {
   }
   .menuItem {
     width: 25%;
-    padding: 14px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -503,37 +507,41 @@ body.sideBarClose .subMenuToolTip li a.active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 8px;
     margin-bottom: 0;
   }
 
   .menuIcon {
     display: flex;
-    width: 24px;
-    height: 24px;
-    padding: 3.395px 2.628px 3.628px 2.872px;
+    width: 30px;
+    height: 30px;
+    padding: 3.5px 3.507px;
+    /* padding: 3.395px 2.628px 3.628px 2.872px; */
     margin-right: 0px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
   }
 
+  .iconHome {
+    width: 27px;
+    height: 29px;
+  }
+
   .menuItem > .menuLink > p {
     color: #444;
     text-align: center;
     font-family: "Gilroy";
-    font-size: 12px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
 
   body.sideBarClose .menuLink > p {
-    font-size: 12px;
+    font-size: 16px;
   }
-}
 
-@media screen and (max-width: 430px) {
   .menuLink:hover,
   .menuLink.active {
     /* color: #5f1111!important; */
@@ -550,15 +558,97 @@ body.sideBarClose .subMenuToolTip li a.active {
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
+  .menuIcon {
+    display: flex;
+    width: 26px;
+    height: 26px;
+    padding: 3px;
+    /* padding: 3.395px 2.628px 3.628px 2.872px; */
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .iconHome {
+    width: 23px;
+    height: 24px;
+  }
+
   .menuItem > .menuLink > p {
     color: #444;
     text-align: center;
     font-family: "Gilroy";
-    font-size: 10px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menuItem {
+    padding: 14px;
+  }
+
+  .menuLink {
+    height: auto;
+    gap: 5px;
+  }
+
+  /* Each icon's height, width and padding are given separately */
+
+  .iconHome {
+     /* width: 20.068px;
+    height: 20px; */
+    /* display: inline-block; */
+    width: 24.068px;
+height: 24px;
+padding: 2px 2.507px;
+   
+  }
+
+  .iconDownload {
+    width: 24px;
+height: 24px;
+padding: 3.395px 2.628px 3.628px 2.872px;
+  }
+
+  .iconProduct {
+    width: 24px;
+height: 24px;
+padding: 2.5px 3px 3px 3px;
+  }
+
+  .iconDashboard {
+    width: 24px;
+height: 24px;
+padding: 3px;
+  }
+
+  .menuItem > .menuLink > p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .menuItem {
+    padding: 10px;
+  }
+
+  .menuLink {
+    height: auto;
+    gap: 5px;
+  }
+
+  .menuIcon {
+    width: 16px;
+    height: 16px;
+    padding: 1px 1.507px;
+  }
+  .menuItem > .menuLink > p {
+    font-size: 8px;
   }
 }
 </style>
