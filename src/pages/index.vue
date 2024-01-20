@@ -130,19 +130,6 @@
 
 <style lang="scss">
 .table_all_container {
-  // @media (max-width: 1440px) {
-  //   width: 90%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   margin: 0 auto;
-  // }
-  // @media (max-width: 1024px) {
-  //   margin-left: 20%;
-  // }
-  // @media (max-width: 768px) {
-  //   margin-left: 25%;
-  // }
   @media (max-width: 600px) {
     margin-left: 0;
     width: 100%;
@@ -179,12 +166,13 @@
 .table_wrap {
   width: 100%;
   margin: auto;
+  margin-top: 25px;
   font-family: Gilroy;
 
   @media (max-width: 600px) {
     width: 100%;
     margin: auto;
-    margin-top: 12px;
+    margin-top: 25px;
     font-family: Gilroy;
     font-size: 15px;
     line-height: 25px;
@@ -357,7 +345,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  margin-top: 25px;
+  padding: 10px;
 }
 
 .order_title p {
@@ -416,12 +405,12 @@
   width: 95%;
   margin: auto;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-direction: column;
 }
 
 .order_list {
-  height: 70px;
+  height: 66px;
   display: flex;
   justify-content: space-between;
   border-radius: 15px;
