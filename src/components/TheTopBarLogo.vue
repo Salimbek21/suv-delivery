@@ -32,6 +32,7 @@ const router = useRouter();
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  margin-top: 15px;
   padding-bottom: 20px;
   border-radius: 0px 0px 14px 14px;
 }
@@ -95,6 +96,10 @@ const router = useRouter();
 }
 
 @media screen and (max-width: 400px) {
+  .topBarLogo {
+  margin-top: 11px;
+}
+
   .siteLogo > img {
     width: 24px;
     height: 26px;

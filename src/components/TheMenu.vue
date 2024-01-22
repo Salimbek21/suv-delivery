@@ -487,6 +487,7 @@ body.sideBarClose .subMenuToolTip li a.active {
     border-radius: 40px;
     background: rgba(245, 245, 245, 0.5);
     backdrop-filter: blur(20px);
+    margin-bottom: 15px;
     z-index: 1;
   }
 
@@ -588,6 +589,9 @@ body.sideBarClose .subMenuToolTip li a.active {
 }
 
 @media screen and (max-width: 400px) {
+  .menu {
+    margin-bottom: 11px;
+  }
   .menuItem {
     padding: 14px;
   }
@@ -600,31 +604,30 @@ body.sideBarClose .subMenuToolTip li a.active {
   /* Each icon's height, width and padding are given separately */
 
   .iconHome {
-     /* width: 20.068px;
+    /* width: 20.068px;
     height: 20px; */
     /* display: inline-block; */
     width: 24.068px;
-height: 24px;
-padding: 2px 2.507px;
-   
+    height: 24px;
+    padding: 2px 2.507px;
   }
 
   .iconDownload {
     width: 24px;
-height: 24px;
-padding: 3.395px 2.628px 3.628px 2.872px;
+    height: 24px;
+    padding: 3.395px 2.628px 3.628px 2.872px;
   }
 
   .iconProduct {
     width: 24px;
-height: 24px;
-padding: 2.5px 3px 3px 3px;
+    height: 24px;
+    padding: 2.5px 3px 3px 3px;
   }
 
   .iconDashboard {
     width: 24px;
-height: 24px;
-padding: 3px;
+    height: 24px;
+    padding: 3px;
   }
 
   .menuItem > .menuLink > p {
