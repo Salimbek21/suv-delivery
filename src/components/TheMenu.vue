@@ -34,6 +34,19 @@ function toggleDropdown(event: any) {
     <li class="menuItem">
       <RouterLink
         class="menuLink"
+        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        to="/customers"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>Mijozlar</p>
+      </RouterLink>
+    </li>
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
         :class="router.currentRoute.value.path == '/order' && 'active'"
         to="/order"
         w-full
@@ -59,6 +72,7 @@ function toggleDropdown(event: any) {
       </RouterLink>
     </li>
     <!-- Menyu -->
+    
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -69,7 +83,20 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconDashboard"></i>
-        <p>Меню</p>
+        <p>Menejerlar</p>
+      </RouterLink>
+    </li>
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        to="/menu"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>Shikastlangan mahsulolar</p>
       </RouterLink>
     </li>
 
