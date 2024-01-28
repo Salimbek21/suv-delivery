@@ -182,4 +182,10 @@ body.sideBarClose .logOutBtn::after {
   margin-left: 0;
   background-color: #8d8d8d;
 }
+
+@media screen and (max-width:600px) {
+  .sideBar{
+    display: none;
+  }
+}
 </style>
