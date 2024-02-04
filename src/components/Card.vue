@@ -2,7 +2,6 @@
 
 <template>
   <div class="mainCard">
-    <slot />
   </div>
 </template>
 

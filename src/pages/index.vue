@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import card from "../pages/mainPage/card.vue"
+</script>
 
 <template>
-  <div>Main Page</div>
+  <card/>
 </template>
