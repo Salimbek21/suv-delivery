@@ -30,6 +30,21 @@ function toggleDropdown(event: any) {
         <p>Главная</p>
       </RouterLink>
     </li>
+    <!-- Mijozlar -->
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        to="/customers"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>Mijozlar</p>
+      </RouterLink>
+    </li>
+
     <!-- Zakaz -->
     <li class="menuItem">
       <RouterLink
@@ -70,6 +85,33 @@ function toggleDropdown(event: any) {
       >
         <i class="menuIcon iconDashboard"></i>
         <p>Меню</p>
+      </RouterLink>
+    </li>
+
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        to="/menu"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>Menejerlar</p>
+      </RouterLink>
+    </li>
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        to="/menu"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>Shikastlangan mahsulolar</p>
       </RouterLink>
     </li>
 

@@ -8,6 +8,14 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Card: typeof import('./components/Card.vue')['default']
+    Customers: typeof import('./components/Customers/index.vue')['default']
+    ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElInput: typeof import('element-plus/es')['ElInput']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElPageHeader: typeof import('element-plus/es')['ElPageHeader']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabButtons: typeof import('./components/TabButtons.vue')['default']
@@ -19,6 +27,5 @@ declare module 'vue' {
     TheSidebar: typeof import('./components/TheSidebar.vue')['default']
     TheTable: typeof import('./components/TheTable.vue')['default']
     TheTopBarLogo: typeof import('./components/TheTopBarLogo.vue')['default']
-    TheUpSideBarLogo: typeof import('./components/TheUpSideBarLogo.vue')['default']
   }
 }
