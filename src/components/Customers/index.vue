@@ -238,9 +238,9 @@ const options = [
         <nav class="filterNavbar">
         <div class="container filterationNavContainer">
    <!-- <<<<<<<<<<<<<  Search  Table with custom header in Element-Plus  >>>>>>>>>>>>> -->
-        <div><p>поиск</p><el-input v-model="search" :fetch-suggestions="querySearch" class="searchInput"  :prefix-icon="Search" /></div>  
+        <!-- <div><p>поиск</p><el-input v-model="search" :fetch-suggestions="querySearch" class="searchInput"  :prefix-icon="Search" /></div>   -->
    <!-- <<<<<<<<<<<<<<<  Filter Custom template in Element-plus >>>>>>>>>>>>>>>> -->
-          <div>
+  <div>
           <p>поиск</p>
           <el-autocomplete
     v-model="state"
@@ -366,7 +366,9 @@ const options = [
       <el-button type="danger" :icon="CircleClose" size="small">
       <!-- <i class="filterationIcon iconRemove"></i> -->
       сбросит</el-button>
-      <el-button type="primary" :icon="Search" size="small">поиск</el-button>
+      <el-button type="primary" :icon="Search" size="small">
+      <!-- <i class="filterationIcon iconSearch"></i> -->
+      поиск</el-button>
     </div>
        
     </header>
@@ -453,10 +455,10 @@ const options = [
 }
 
 .filterationIcon {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   flex: none;
-  margin-right: 10px;
+  margin-right: 5px;
   background-color: #ffff;
   transition: all 0.2s linear;
 }
@@ -464,6 +466,10 @@ const options = [
 .filterationIcon.iconRemove {
   -webkit-mask: url("/src/assets/icons/login-ban.svg") no-repeat center/100%;
   -mask: url("/src/assets/icons/login-ban.svg") no-repeat center/100%;
+}
+.filterationIcon.iconSearch {
+  -webkit-mask: url("/src/assets/icons/login-search.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/login-search.svg") no-repeat center/100%;
 }
 </style>
 

@@ -27,24 +27,23 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconHome"></i>
-        <p>Главная</p>
+        <p>главная</p>
       </RouterLink>
     </li>
     <!-- Mijozlar -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        :class="router.currentRoute.value.path == '/customers' && 'active'"
         to="/customers"
         w-full
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
-        <p>Mijozlar</p>
+        <i class="menuIcon iconCustomer"></i>
+        <p>клиенты</p>
       </RouterLink>
     </li>
-
     <!-- Zakaz -->
     <li class="menuItem">
       <RouterLink
@@ -55,7 +54,7 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDownload"></i>
+        <i class="menuIcon iconBook"></i>
         <p>Заказы</p>
       </RouterLink>
     </li>
@@ -87,31 +86,32 @@ function toggleDropdown(event: any) {
         <p>Меню</p>
       </RouterLink>
     </li>
-
+    <!-- <<<<<<<< Menejerlar >>>>>>>>>>> -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/menu' && 'active'"
-        to="/menu"
+        :class="router.currentRoute.value.path == '/manager' && 'active'"
+        to="/manager"
         w-full
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
-        <p>Menejerlar</p>
+        <i class="menuIcon iconManager"></i>
+        <p>менеджеры</p>
       </RouterLink>
     </li>
+     <!-- <<<<<<<< Shikastlangan Mahsulotlar >>>>>>>>>>> -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/menu' && 'active'"
-        to="/menu"
+        :class="router.currentRoute.value.path == '/damagedProducts' && 'active'"
+        to="/damagedProducts"
         w-full
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
-        <p>Shikastlangan mahsulolar</p>
+        <i class="menuIcon iconDamagedProducts"></i>
+        <p>поврежденные продукты</p>
       </RouterLink>
     </li>
 
@@ -222,7 +222,7 @@ function toggleDropdown(event: any) {
 }
 .menuItem > .menuLink > p {
   color: #444;
-  text-align: center;
+  text-align:left ;
   font-family: "Gilroy";
   font-size: 18px;
   font-style: normal;
@@ -275,9 +275,25 @@ function toggleDropdown(event: any) {
   -webkit-mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
   -mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
 }
+.menuIcon.iconBook {
+  -webkit-mask: url("/src/assets/icons/book.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/book.svg") no-repeat center/100%;
+}
 .menuIcon.iconHome {
   -webkit-mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
   -mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
+}
+.menuIcon.iconManager {
+  -webkit-mask: url("/src/assets/icons/manager.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/manager.svg") no-repeat center/100%;
+}
+.menuIcon.iconCustomer {
+  -webkit-mask: url("/src/assets/icons/logo-customer.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/logo-customer.svg") no-repeat center/100%;
+}
+.menuIcon.iconDamagedProducts {
+  -webkit-mask: url("/src/assets/icons/damaged-items.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/damaged-items.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconRegistration {
