@@ -314,7 +314,7 @@ const options = [
     v-model="value"
     filterable
     placeholder="дилер виберита"
-    style="width: 240px"
+    style="width: 180px"
   >
     <el-option
       v-for="item in options"
@@ -331,7 +331,7 @@ const options = [
     v-model="value"
     filterable
     placeholder="категория виберита"
-    style="width: 220px"
+    style="width: 160px"
   >
     <el-option
       v-for="item in options"
@@ -363,7 +363,9 @@ const options = [
         </nav>
         
     <div class="container filterationBtnContainer">  
-      <el-button type="danger" :icon="CircleClose" size="small">сбросит</el-button>
+      <el-button type="danger" :icon="CircleClose" size="small">
+      <!-- <i class="filterationIcon iconRemove"></i> -->
+      сбросит</el-button>
       <el-button type="primary" :icon="Search" size="small">поиск</el-button>
     </div>
        
@@ -448,6 +450,20 @@ const options = [
 }
 .my-autocomplete li .highlighted .addr {
   color: #ddd;
+}
+
+.filterationIcon {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  margin-right: 10px;
+  background-color: #ffff;
+  transition: all 0.2s linear;
+}
+
+.filterationIcon.iconRemove {
+  -webkit-mask: url("/src/assets/icons/login-ban.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/login-ban.svg") no-repeat center/100%;
 }
 </style>
 
