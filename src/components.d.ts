@@ -8,7 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Card: typeof import('./components/Card.vue')['default']
-    copy: typeof import('./components/Card copy.vue')['default']
     Customers: typeof import('./components/Customers/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -21,6 +20,5 @@ declare module 'vue' {
     TheSidebar: typeof import('./components/TheSidebar.vue')['default']
     TheTable: typeof import('./components/TheTable.vue')['default']
     TheTopBarLogo: typeof import('./components/TheTopBarLogo.vue')['default']
-    TheUpSideBarLogo: typeof import('./components/TheUpSideBarLogo.vue')['default']
   }
 }

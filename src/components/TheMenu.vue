@@ -3,6 +3,7 @@ const router = useRouter();
 const permissions = localStorage.getItem("permissions");
 const result = filterByPermission(menu, permissions);
 
+
 function filterByPermission(menu: any, permissions: any) {
   return menu.filter((item: any) => permissions?.includes(item?.permission));
 }
@@ -27,34 +28,21 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconHome"></i>
-        <p>Главная</p>
+        <p>Мониторинг</p>
       </RouterLink>
     </li>
-    <!-- Zakaz -->
+    <!-- Mijozlar -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/menu' && 'active'"
+        :class="router.currentRoute.value.path == '/customers' && 'active'"
         to="/customers"
         w-full
         flex
         items-center
       >
         <i class="menuIcon iconDashboard"></i>
-        <p>Mijozlar</p>
-      </RouterLink>
-    </li>
-    <li class="menuItem">
-      <RouterLink
-        class="menuLink"
-        :class="router.currentRoute.value.path == '/order' && 'active'"
-        to="/order"
-        w-full
-        flex
-        items-center
-      >
-        <i class="menuIcon iconDownload"></i>
-        <p>Заказы</p>
+        <p>Мижозлар</p>
       </RouterLink>
     </li>
     <!-- Produkta -->
@@ -68,35 +56,50 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconProduct"></i>
-        <p>Продукты</p>
+        <p>Маҳсулотлар</p>
       </RouterLink>
     </li>
-    <!-- Menyu -->
+    <!-- Buyurtmalar -->
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/order' && 'active'"
+        to="/order"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDownload"></i>
+        <p>Буюртмалар</p>
+      </RouterLink>
+    </li>
     
+    <!-- Менежерлар --> 
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/menu' && 'active'"
-        to="/menu"
+        :class="router.currentRoute.value.path == '/managers' && 'active'"
+        to="/managers"
         w-full
         flex
         items-center
       >
         <i class="menuIcon iconDashboard"></i>
-        <p>Menejerlar</p>
+        <p>Менежерлар</p>
       </RouterLink>
     </li>
+    <!-- Шикастланганлар -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/menu' && 'active'"
-        to="/menu"
+        :class="router.currentRoute.value.path == '/damaged-property' && 'active'"
+        to="/damaged-property"
         w-full
         flex
         items-center
       >
         <i class="menuIcon iconDashboard"></i>
-        <p>Shikastlangan mahsulolar</p>
+        <p>Шикастланганлар</p>
       </RouterLink>
     </li>
 
