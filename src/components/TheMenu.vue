@@ -3,7 +3,6 @@ const router = useRouter();
 const permissions = localStorage.getItem("permissions");
 const result = filterByPermission(menu, permissions);
 
-
 function filterByPermission(menu: any, permissions: any) {
   return menu.filter((item: any) => permissions?.includes(item?.permission));
 }
@@ -27,7 +26,7 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconHome"></i>
+        <i class="menuIcon iconMonitor"></i>
         <p>Мониторинг</p>
       </RouterLink>
     </li>
@@ -41,7 +40,7 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
+        <i class="menuIcon iconCustomers"></i>
         <p>Мижозлар</p>
       </RouterLink>
     </li>
@@ -69,12 +68,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDownload"></i>
+        <i class="menuIcon iconOrders"></i>
         <p>Буюртмалар</p>
       </RouterLink>
     </li>
-    
-    <!-- Менежерлар --> 
+    <!-- Менежерлар -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -84,7 +82,7 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
+        <i class="menuIcon iconManager"></i>
         <p>Менежерлар</p>
       </RouterLink>
     </li>
@@ -98,7 +96,7 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
+        <i class="menuIcon iconBroken"></i>
         <p>Шикастланганлар</p>
       </RouterLink>
     </li>
@@ -227,9 +225,10 @@ function toggleDropdown(event: any) {
 }
 
 .menuIcon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 34px;
   flex: none;
+  margin-top: 5px;
   margin-right: 10px;
   background-color: #444;
   transition: all 0.2s linear;
@@ -247,9 +246,9 @@ function toggleDropdown(event: any) {
   color: #fff !important;
 }
 
-.menuIcon.iconDashboard {
-  -webkit-mask: url("/src/assets/icons/menu/dashboard.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/dashboard.svg") no-repeat center/100%;
+.menuIcon.iconCustomers {
+  -webkit-mask: url("/src/assets/icons/menu/two-people.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/two-people.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconReports {
@@ -257,16 +256,20 @@ function toggleDropdown(event: any) {
   -mask: url("/src/assets/icons/menu/reports.svg") no-repeat center/100%;
 }
 .menuIcon.iconProduct {
-  -webkit-mask: url("/src/assets/icons/menu/product.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/product.svg") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/menu/bag-pack.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/bag-pack.svg") no-repeat center/100%;
 }
-.menuIcon.iconDownload {
-  -webkit-mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
+.menuIcon.iconOrders {
+  -webkit-mask: url("/src/assets/icons/menu/orders-black.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/orders-black.svg") no-repeat center/100%;
 }
-.menuIcon.iconHome {
-  -webkit-mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
+.menuIcon.iconManager {
+  -webkit-mask: url("/src/assets/icons/menu/manager.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/manager.svg") no-repeat center/100%;
+}
+.menuIcon.iconMonitor {
+  -webkit-mask: url("/src/assets/icons/menu/signal.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/signal.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconRegistration {
@@ -279,9 +282,9 @@ function toggleDropdown(event: any) {
   -mask: url("/src/assets/icons/menu/roles.svg") no-repeat center/100%;
 }
 
-.menuIcon.iconStaffs {
-  -webkit-mask: url("/src/assets/icons/menu/staffs.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/staffs.svg") no-repeat center/100%;
+.menuIcon.iconBroken {
+  -webkit-mask: url("/src/assets/icons/menu/no-layers-black.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/menu/no-layers-black.svg") no-repeat center/100%;
 }
 
 .menuIcon.iconNotification {
@@ -554,7 +557,7 @@ body.sideBarClose .subMenuToolTip li a.active {
     flex-shrink: 0;
   }
 
-  .iconHome {
+  .iconMonitor {
     width: 27px;
     height: 29px;
   }
@@ -602,7 +605,7 @@ body.sideBarClose .subMenuToolTip li a.active {
     flex-shrink: 0;
   }
 
-  .iconHome {
+  .iconMonitor {
     width: 23px;
     height: 24px;
   }
@@ -630,32 +633,46 @@ body.sideBarClose .subMenuToolTip li a.active {
 
   /* Each icon's height, width and padding are given separately */
 
-  .iconHome {
-     /* width: 20.068px;
+  .iconMonitor {
+    /* width: 20.068px;
     height: 20px; */
     /* display: inline-block; */
     width: 24.068px;
-height: 24px;
-padding: 2px 2.507px;
-   
+    height: 24px;
+    padding: 2px 2.507px;
   }
 
-  .iconDownload {
+  .iconManager {
     width: 24px;
-height: 24px;
-padding: 3.395px 2.628px 3.628px 2.872px;
+    height: 24px;
+    padding: 3.395px 2.628px 3.628px 2.872px;
   }
 
+  .iconOrders {
+    width: 24px;
+    height: 24px;
+    padding: 2.5px 3px 3px 3px;
+  }
   .iconProduct {
     width: 24px;
-height: 24px;
-padding: 2.5px 3px 3px 3px;
+    height: 24px;
+    padding: 2.5px 3px 3px 3px;
+  }
+  .iconBroken {
+    width: 24px;
+    height: 24px;
+    padding: 2.5px 3px 3px 3px;
   }
 
+  .iconCustomers {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+  }
   .iconDashboard {
     width: 24px;
-height: 24px;
-padding: 3px;
+    height: 24px;
+    padding: 3px;
   }
 
   .menuItem > .menuLink > p {
