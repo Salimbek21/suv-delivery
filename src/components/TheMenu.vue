@@ -16,7 +16,7 @@ function toggleDropdown(event: any) {
 <template>
   <ul class="menu">
     <li class="cursor-pointer mb-[10px]"></li>
-    <!-- Glavniy -->
+    <!-- Dashboard -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -26,11 +26,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconHome"></i>
-        <p>главная</p>
+        <i class="menuIcon iconDashboard"></i>
+        <p>Дэшборд</p>
       </RouterLink>
     </li>
-    <!-- Mijozlar -->
+    <!-- Requests -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -40,11 +40,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconCustomer"></i>
-        <p>клиенты</p>
+        <i class="menuIcon iconRequests"></i>
+        <p>Заявки</p>
       </RouterLink>
     </li>
-    <!-- Zakaz -->
+    <!-- Промокоды -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -54,11 +54,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconBook"></i>
-        <p>Заказы</p>
+        <i class="menuIcon iconPromocode"></i>
+        <p>Промокоды</p>
       </RouterLink>
     </li>
-    <!-- Produkta -->
+    <!-- Reports -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -68,11 +68,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconProduct"></i>
-        <p>Продукты</p>
+        <i class="menuIcon iconReports"></i>
+        <p>Отчеты</p>
       </RouterLink>
     </li>
-    <!-- Menyu -->
+    <!-- Акции -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -82,11 +82,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDashboard"></i>
-        <p>Меню</p>
+        <i class="menuIcon iconDiscounts"></i>
+        <p>Акции</p>
       </RouterLink>
     </li>
-    <!-- <<<<<<<< Menejerlar >>>>>>>>>>> -->
+    <!-- <<<<<<<< Notifications >>>>>>>>>>> -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -96,11 +96,11 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconManager"></i>
-        <p>менеджеры</p>
+        <i class="menuIcon iconNotifications"></i>
+        <p>Уведомления</p>
       </RouterLink>
     </li>
-     <!-- <<<<<<<< Shikastlangan Mahsulotlar >>>>>>>>>>> -->
+     <!-- <<<<<<<< History >>>>>>>>>>> -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -110,8 +110,36 @@ function toggleDropdown(event: any) {
         flex
         items-center
       >
-        <i class="menuIcon iconDamagedProducts"></i>
-        <p>поврежденные продукты</p>
+        <i class="menuIcon iconHistory"></i>
+        <p>Истории</p>
+      </RouterLink>
+    </li>
+     <!-- <<<<<<<< roles >>>>>>>>>>> -->
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/damagedProducts' && 'active'"
+        to="/damagedProducts"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconRole"></i>
+        <p>Роли</p>
+      </RouterLink>
+    </li>
+     <!-- <<<<<<<< Customers >>>>>>>>>>> -->
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/damagedProducts' && 'active'"
+        to="/damagedProducts"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconCustomers"></i>
+        <p>Сотрудники</p>
       </RouterLink>
     </li>
 
@@ -259,67 +287,47 @@ function toggleDropdown(event: any) {
 }
 
 .menuIcon.iconDashboard {
-  -webkit-mask: url("/src/assets/icons/menu/dashboard.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/dashboard.svg") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
 }
-
+.menuIcon.iconDashboard {
+  -webkit-mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
+}
+.menuIcon.iconRequests {
+  -webkit-mask: url("/src/assets/icons/sidebar/quote-request.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/quote-request.png") no-repeat center/100%;
+}
+.menuIcon.iconPromocode {
+  -webkit-mask: url("/src/assets/icons/sidebar/promocode.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/promocode.png") no-repeat center/100%;
+}
 .menuIcon.iconReports {
-  -webkit-mask: url("/src/assets/icons/menu/reports.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/reports.svg") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/reports.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/reports.png") no-repeat center/100%;
 }
-.menuIcon.iconProduct {
-  -webkit-mask: url("/src/assets/icons/menu/product.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/product.svg") no-repeat center/100%;
+.menuIcon.iconDiscounts {
+  -webkit-mask: url("/src/assets/icons/sidebar/discounts.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/discounts.png") no-repeat center/100%;
 }
-.menuIcon.iconDownload {
-  -webkit-mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/download.svg") no-repeat center/100%;
+.menuIcon.iconNotifications {
+  -webkit-mask: url("/src/assets/icons/sidebar/notifications.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/notifications.png") no-repeat center/100%;
 }
-.menuIcon.iconBook {
-  -webkit-mask: url("/src/assets/icons/book.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/book.svg") no-repeat center/100%;
+.menuIcon.iconHistory {
+  -webkit-mask: url("/src/assets/icons/sidebar/history.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/history.png") no-repeat center/100%;
 }
-.menuIcon.iconHome {
-  -webkit-mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/home.svg") no-repeat center/100%;
+.menuIcon.iconRole {
+  -webkit-mask: url("/src/assets/icons/sidebar/role.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/role.png") no-repeat center/100%;
 }
-.menuIcon.iconManager {
-  -webkit-mask: url("/src/assets/icons/manager.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/manager.svg") no-repeat center/100%;
-}
-.menuIcon.iconCustomer {
-  -webkit-mask: url("/src/assets/icons/logo-customer.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/logo-customer.svg") no-repeat center/100%;
-}
-.menuIcon.iconDamagedProducts {
-  -webkit-mask: url("/src/assets/icons/damaged-items.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/damaged-items.svg") no-repeat center/100%;
+.menuIcon.iconCustomers {
+  -webkit-mask: url("/src/assets/icons/sidebar/customers.png") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/customers.png") no-repeat center/100%;
 }
 
-.menuIcon.iconRegistration {
-  -webkit-mask: url("/src/assets/icons/menu/registration.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/registration.svg") no-repeat center/100%;
-}
 
-.menuIcon.iconRoles {
-  -webkit-mask: url("/src/assets/icons/menu/roles.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/roles.svg") no-repeat center/100%;
-}
-
-.menuIcon.iconStaffs {
-  -webkit-mask: url("/src/assets/icons/menu/staffs.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/staffs.svg") no-repeat center/100%;
-}
-
-.menuIcon.iconNotification {
-  -webkit-mask: url("/src/assets/icons/menu/notification.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/notification.svg") no-repeat center/100%;
-}
-
-.menuIcon.iconDiscount {
-  -webkit-mask: url("/src/assets/icons/menu/discounts.svg") no-repeat center/100%;
-  -mask: url("/src/assets/icons/menu/discounts.svg") no-repeat center/100%;
-}
 
 /* sub menu */
 .subMenu {
