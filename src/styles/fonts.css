@@ -1,120 +1,56 @@
-@font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-BdIt.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-BdIt.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-BdIt.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
+
 
 @font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-DmBd.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-DmBd.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-DmBd.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'inter';
+  src: url('../assets/fonts/inter-v13-latin-regular.ttf') format('truetype'),
+       url('../assets/fonts/inter-v13-latin-regular.woff') format('woff'),
+       url('../assets/fonts/inter-v13-latin-regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-BlkIt.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-BlkIt.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-BlkIt.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-Blk.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-Blk.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-Blk.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-DmBdIt.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-DmBdIt.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-DmBdIt.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-Bd.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-Bd.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-Bd.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-It.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-It.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-It.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-Md.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-Md.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-Md.ttf') format('truetype');
+  font-family: 'inter';
+  src: url('../assets/fonts/inter-v13-latin-500.ttf') format('truetype'),
+       url('../assets/fonts/inter-v13-latin-500.woff') format('woff'),
+       url('../assets/fonts/inter-v13-latin-500.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-LtIt.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-LtIt.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-LtIt.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
+  font-family: 'inter';
+  src: url('../assets/fonts/inter-v13-latin-600.ttf') format('truetype'),
+       url('../assets/fonts/inter-v13-latin-600.woff') format('woff'),
+       url('../assets/fonts/inter-v13-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-XLtIt.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-XLtIt.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-XLtIt.ttf') format('truetype');
-  font-weight: 200;
-  font-style: italic;
+  font-family: 'inter';
+  src: url('../assets/fonts/inter-v13-latin-700.ttf') format('truetype'),
+       url('../assets/fonts/inter-v13-latin-700.woff') format('woff'),
+       url('../assets/fonts/inter-v13-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'TT Interphases Pro';
-  src:
-    url('../assets/fonts/TTInterphasesPro-Rg.woff2') format('woff2'),
-    url('../assets/fonts/TTInterphasesPro-Rg.woff') format('woff'),
-    url('../assets/fonts/TTInterphasesPro-Rg.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'inter';
+  src: url('../assets/fonts/inter-v13-latin-800.ttf') format('truetype'),
+       url('../assets/fonts/inter-v13-latin-800.woff') format('woff'),
+       url('../assets/fonts/inter-v13-latin-800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'inter';
+  src: url('../assets/fonts/inter-v13-latin-900.ttf') format('truetype'),
+       url('../assets/fonts/inter-v13-latin-900.woff') format('woff'),
+       url('../assets/fonts/inter-v13-latin-900.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
