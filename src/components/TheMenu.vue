@@ -233,7 +233,7 @@ function toggleDropdown(event: any) {
 
 <style>
 .menuItem {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .menuLink {
@@ -462,17 +462,27 @@ text-transform: capitalize;
   transform: rotate(0deg);
 }
 
+body.sideBarClose .menu>li:nth-child(4),
+body.sideBarClose .menu>li:nth-child(6),
+body.sideBarClose .menu>li:nth-child(7),
+body.sideBarClose .menu>li:nth-child(8) {
+  display:none;
+}
+
 body.sideBarClose .menuItem {
+  max-width: 44px;
   margin-bottom: 20px;
 }
 
 body.sideBarClose .menuLink {
   display: flex;
   align-items: center;
-  /* padding: 0px; */
+  justify-content: center;
+  padding: 0px;
   /* font-size: 0px; */
   /* padding: 6px; */
 }
+
 
 /* <<<<<<<<<< When the menu is collapsed, the menu text disappears >>>>>>>>>>> */
 
