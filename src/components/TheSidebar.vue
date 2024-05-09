@@ -145,7 +145,7 @@ body.sideBarClose .sideBarLogo {
 body.sideBarClose .sideBarLogo .logo {
   width: 36px;
   height: 36px;
-  background-image: url('/src/assets/logonewres.svg');
+  background-image: url('/src/assets/logoSite.svg');
   margin-bottom: 24px;
 }
 

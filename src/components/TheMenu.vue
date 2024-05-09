@@ -118,8 +118,8 @@ function toggleDropdown(event: any) {
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/damagedProducts' && 'active'"
-        to="/damagedProducts"
+        :class="router.currentRoute.value.path == '/roles' && 'active'"
+        to="/roles"
         w-full
         flex
         items-center
@@ -129,7 +129,7 @@ function toggleDropdown(event: any) {
       </RouterLink>
     </li>
      <!-- <<<<<<<< Customers >>>>>>>>>>> -->
-    <li class="menuItem">
+    <!-- <li class="menuItem">
       <RouterLink
         class="menuLink"
         :class="router.currentRoute.value.path == '/damagedProducts' && 'active'"
@@ -141,7 +141,7 @@ function toggleDropdown(event: any) {
         <i class="menuIcon iconCustomers"></i>
         <p>Сотрудники</p>
       </RouterLink>
-    </li>
+    </li> -->
 
     <div v-for="(item, index) in result" :key="index">
       <ul
@@ -233,30 +233,39 @@ function toggleDropdown(event: any) {
 
 <style>
 .menuItem {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .menuLink {
+  height: 44px;
   display: flex;
   align-items: center;
+  position: relative;
+  padding: 0 10px;
   font-size: 16px;
   font-weight: normal;
   color: #0657c9;
-  padding: 0 10px;
   border-radius: 10px;
-  height: 44px;
-  position: relative;
   transition: all 0.2s linear;
 }
 .menuItem > .menuLink > p {
-  color: #444;
+  /* color: #444;
   text-align:left ;
-  font-family: "Gilroy";
+  font-family: "Inter";
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  text-transform: capitalize;
+   */
+
+  color: rgb(0, 0, 0);
+font-family: 'Inter';
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.19rem;
+letter-spacing: 0%;
+text-align: left;
+text-transform: capitalize;
 }
 
 .menuLink:hover,
@@ -266,8 +275,8 @@ function toggleDropdown(event: any) {
 }
 
 .menuIcon {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   flex: none;
   margin-right: 10px;
   background-color: #444;
@@ -287,44 +296,44 @@ function toggleDropdown(event: any) {
 }
 
 .menuIcon.iconDashboard {
-  -webkit-mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/dashboard.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/dashboard.svg") no-repeat center/100%;
 }
 .menuIcon.iconDashboard {
-  -webkit-mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/dashboard.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/dashboard.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/dashboard.svg") no-repeat center/100%;
 }
 .menuIcon.iconRequests {
-  -webkit-mask: url("/src/assets/icons/sidebar/quote-request.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/quote-request.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/quote-request.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/quote-request.svg") no-repeat center/100%;
 }
 .menuIcon.iconPromocode {
-  -webkit-mask: url("/src/assets/icons/sidebar/promocode.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/promocode.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/promocode.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/promocode.svg") no-repeat center/100%;
 }
 .menuIcon.iconReports {
-  -webkit-mask: url("/src/assets/icons/sidebar/reports.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/reports.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/reports.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/reports.svg") no-repeat center/100%;
 }
 .menuIcon.iconDiscounts {
-  -webkit-mask: url("/src/assets/icons/sidebar/discounts.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/discounts.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/discounts.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/discounts.svg") no-repeat center/100%;
 }
 .menuIcon.iconNotifications {
-  -webkit-mask: url("/src/assets/icons/sidebar/notifications.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/notifications.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/notifications.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/notifications.svg") no-repeat center/100%;
 }
 .menuIcon.iconHistory {
-  -webkit-mask: url("/src/assets/icons/sidebar/history.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/history.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/history.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/history.svg") no-repeat center/100%;
 }
 .menuIcon.iconRole {
-  -webkit-mask: url("/src/assets/icons/sidebar/role.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/role.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/role.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/role.svg") no-repeat center/100%;
 }
 .menuIcon.iconCustomers {
-  -webkit-mask: url("/src/assets/icons/sidebar/customers.png") no-repeat center/100%;
-  -mask: url("/src/assets/icons/sidebar/customers.png") no-repeat center/100%;
+  -webkit-mask: url("/src/assets/icons/sidebar/customers.svg") no-repeat center/100%;
+  -mask: url("/src/assets/icons/sidebar/customers.svg") no-repeat center/100%;
 }
 
 
@@ -598,7 +607,7 @@ body.sideBarClose .subMenuToolTip li a.active {
   .menuItem > .menuLink > p {
     color: #444;
     text-align: center;
-    font-family: "Gilroy";
+    font-family: "Inter";
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
