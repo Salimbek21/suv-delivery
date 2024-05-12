@@ -48,8 +48,8 @@ function toggleDropdown(event: any) {
     <li class="menuItem">
       <RouterLink
         class="menuLink"
-        :class="router.currentRoute.value.path == '/order' && 'active'"
-        to="/order"
+        :class="router.currentRoute.value.path == '/orders' && 'active'"
+        to="/orders"
         w-full
         flex
         items-center

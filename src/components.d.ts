@@ -13,6 +13,7 @@ declare module 'vue' {
     ElButton: typeof import('element-plus/es')['ElButton']
     ElOption: typeof import('element-plus/es')['ElOption']
     ElSelect: typeof import('element-plus/es')['ElSelect']
+    Orders: typeof import('./components/Orders/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabButtons: typeof import('./components/TabButtons.vue')['default']
