@@ -34,14 +34,14 @@ onBeforeMount(async () => {
 
 .content {
   position: relative;
-  margin-left: 256px;
+  margin-left: 256px !important;
   padding: 40px 20px 20px;
   transition: all 0.2s linear;
   z-index: 1;
 }
 
 body.sideBarClose .content {
-  margin-left: 96px;
+  margin-left: 96px !important;
 }
 
 .downMenuContainer {
