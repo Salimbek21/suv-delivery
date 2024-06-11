@@ -45,6 +45,33 @@ function toggleDropdown(event: any) {
         <p>Мижозлар</p>
       </RouterLink>
     </li>
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/promocode' && 'active'"
+        to="/promocode"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>promocode</p>
+      </RouterLink>
+    </li>
+    <li class="menuItem">
+      <RouterLink
+        class="menuLink"
+        :class="router.currentRoute.value.path == '/history' && 'active'"
+        to="/history"
+        w-full
+        flex
+        items-center
+      >
+        <i class="menuIcon iconDashboard"></i>
+        <p>history</p>
+      </RouterLink>
+    </li>
+    
     <!-- Produkta -->
     <li class="menuItem">
       <RouterLink
