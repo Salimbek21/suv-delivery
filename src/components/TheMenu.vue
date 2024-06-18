@@ -100,7 +100,7 @@ function toggleDropdown(event: any) {
         <p>Уведомления</p>
       </RouterLink>
     </li>
-     <!-- <<<<<<<< History >>>>>>>>>>> -->
+    <!-- <<<<<<<< History >>>>>>>>>>> -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -114,7 +114,7 @@ function toggleDropdown(event: any) {
         <p>Истории</p>
       </RouterLink>
     </li>
-     <!-- <<<<<<<< roles >>>>>>>>>>> -->
+    <!-- <<<<<<<< roles >>>>>>>>>>> -->
     <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -128,7 +128,7 @@ function toggleDropdown(event: any) {
         <p>Роли</p>
       </RouterLink>
     </li>
-     <!-- <<<<<<<< Customers >>>>>>>>>>> -->
+    <!-- <<<<<<<< Customers >>>>>>>>>>> -->
     <!-- <li class="menuItem">
       <RouterLink
         class="menuLink"
@@ -259,13 +259,13 @@ function toggleDropdown(event: any) {
    */
 
   color: rgb(0, 0, 0);
-font-family: 'Inter';
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.19rem;
-letter-spacing: 0%;
-text-align: left;
-text-transform: capitalize;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.19rem;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
 }
 
 .menuLink:hover,
@@ -335,8 +335,6 @@ text-transform: capitalize;
   -webkit-mask: url("/src/assets/icons/sidebar/customers.svg") no-repeat center/100%;
   -mask: url("/src/assets/icons/sidebar/customers.svg") no-repeat center/100%;
 }
-
-
 
 /* sub menu */
 .subMenu {
@@ -462,11 +460,11 @@ text-transform: capitalize;
   transform: rotate(0deg);
 }
 
-body.sideBarClose .menu>li:nth-child(4),
-body.sideBarClose .menu>li:nth-child(6),
-body.sideBarClose .menu>li:nth-child(7),
-body.sideBarClose .menu>li:nth-child(8) {
-  display:none;
+body.sideBarClose .menu > li:nth-child(4),
+body.sideBarClose .menu > li:nth-child(6),
+body.sideBarClose .menu > li:nth-child(7),
+body.sideBarClose .menu > li:nth-child(8) {
+  display: none;
 }
 
 body.sideBarClose .menuItem {
@@ -482,7 +480,6 @@ body.sideBarClose .menuLink {
   /* font-size: 0px; */
   /* padding: 6px; */
 }
-
 
 /* <<<<<<<<<< When the menu is collapsed, the menu text disappears >>>>>>>>>>> */
 

@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="tsx" setup>
 // <<<<<<<<<<<<<  Search  Table with custom header in Element-Plus >>>>>>>>>>>>>>>>
 import { computed, ref } from "vue";
 interface User {
@@ -192,7 +192,6 @@ onMounted(() => {
 
 //  <<<<<<<<<<<<<< Select options Option filtering in Element-plus >>>>>>>>>>>
 
-import { ref } from "vue";
 const value = ref("");
 const options = [
   {
@@ -216,7 +215,91 @@ const options = [
     label: "Option5",
   },
 ];
+
+
+
+
+import dayjs from 'dayjs'
+import {
+  ElButton,
+  ElIcon,
+  ElTag,
+  ElTooltip,
+  TableV2FixedDir,
+} from 'element-plus'
+import { Timer } from '@element-plus/icons-vue'
+
+import type { Column, RowClassNameGetter } from 'element-plus'
+
+let id = 0
+
+const dataGenerator = () => ({
+  id: `random-id-${++id}`,
+  name: 'Tom',
+  date: '2020-10-1',
+})
+
+const columns: Column<any>[] = [
+  {
+    key: 'date',
+    title: 'Date',
+    dataKey: 'date',
+    width: 150,
+    fixed: TableV2FixedDir.LEFT,
+    cellRenderer: ({ cellData: date }) => (
+      <ElTooltip content={dayjs(date).format('YYYY/MM/DD')}>
+        {
+          <span class="flex items-center">
+            <ElIcon class="mr-3">
+              <Timer />
+            </ElIcon>
+            {dayjs(date).format('YYYY/MM/DD')}
+          </span>
+        }
+      </ElTooltip>
+    ),
+  },
+  {
+    key: 'name',
+    title: 'Name',
+    dataKey: 'name',
+    width: 600,
+    align: 'center',
+    cellRenderer: ({ cellData: name }) => <ElTag>{name}</ElTag>,
+  },
+  {
+    key: 'operations',
+    title: 'Operations',
+    cellRenderer: () => (
+      <>
+        <ElButton size="small">Edit</ElButton>
+        <ElButton size="small" >
+          Delete
+        </ElButton>
+      </>
+    ),
+    width: 1250,
+    align: 'center',
+    flexGrow: 1,
+  },
+]
+
+const data = ref(Array.from({ length: 200 }).map(dataGenerator))
+
+const rowClass = ({ rowIndex }: Parameters<RowClassNameGetter<any>>[0]) => {
+  if (rowIndex % 10 === 5) {
+    return 'bg-red-100'
+  } else if (rowIndex % 10 === 0) {
+    return 'bg-blue-200'
+  }
+  return ''
+}
+
+
+
 </script>
+
+
 
 <template>
   <header class="headerBc">
@@ -360,24 +443,52 @@ const options = [
       </div>
     </div>
   </header>
+
+  <div class="tableWrapper" >
+  <el-table-v2
+    :columns="columns"
+    :data="data"
+    :row-class="rowClass"
+    :width='1220'
+    :height="1220"
+  />
+</div>
+
+  
+
 </template>
 
 <style>
 .headerBc {
-  position: absolute;
+  width: auto;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   background-color: #f0f3f5;
+  z-index: inherit;
+  transition: all 0.2s linear;
 }
+
 .filterHeader {
-  margin-left: 0px;
-  margin-left: 0px;
+  position: fixed;
+  z-index: inherit;
+  margin-left: 256px;
+  margin-right: 0px;
   background-color: #f0f3f5;
   border-top: 1px solid #e7e9eb;
   border-bottom: 1px solid #e7e9eb;
+  transition: all 0.25s ;
 }
-
+body.sideBarClose .filterHeader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: 95px;
+  background-color: #f0f3f5;
+  z-index: inherit;
+}
 .container {
   width: 97%;
   margin: 0 auto;
@@ -386,6 +497,12 @@ const options = [
 .filterationTitleContainer,
 .filterationBtnContainer {
   padding: 10px 0;
+}
+.filterationBtnContainer>.el-button:nth-child(1){
+  background-color: rgb(219, 38, 38) ;
+}
+.filterationBtnContainer>.el-button:nth-child(2){
+  background-color: rgb(53, 208, 86) ;
 }
 /* .filterationTitleContainer::before{
   content: '';
@@ -463,4 +580,16 @@ const options = [
   -webkit-mask: url("/src/assets/icons/login-search.svg") no-repeat center/100%;
   -mask: url("/src/assets/icons/login-search.svg") no-repeat center/100%;
 }
+
+
+.tableWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.applyTable {
+  width: 900px!important;
+}
+
 </style>
