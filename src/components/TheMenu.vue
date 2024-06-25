@@ -27,7 +27,7 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconDashboard"></i>
-        <p>Дэшборд</p>
+        <p>Мониторинг</p>
       </RouterLink>
     </li>
     <!-- Requests -->
@@ -41,7 +41,7 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconRequests"></i>
-        <p>Заявки</p>
+        <p>Мижозлар</p>
       </RouterLink>
     </li>
     <!-- Промокоды -->
@@ -55,7 +55,7 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconPromocode"></i>
-        <p>Промокоды</p>
+        <p>Маҳсулотлар</p>
       </RouterLink>
     </li>
     <!-- Reports -->
@@ -69,7 +69,7 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconReports"></i>
-        <p>Отчеты</p>
+        <p>Буюртмалар</p>
       </RouterLink>
     </li>
     <!-- Акции -->
@@ -83,7 +83,7 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconDiscounts"></i>
-        <p>Акции</p>
+        <p>Менежерлар</p>
       </RouterLink>
     </li>
     <!-- <<<<<<<< Notifications >>>>>>>>>>> -->
@@ -97,11 +97,11 @@ function toggleDropdown(event: any) {
         items-center
       >
         <i class="menuIcon iconNotifications"></i>
-        <p>Уведомления</p>
+        <p>Шикастланганлар</p>
       </RouterLink>
     </li>
     <!-- <<<<<<<< History >>>>>>>>>>> -->
-    <li class="menuItem">
+    <!-- <li class="menuItem">
       <RouterLink
         class="menuLink"
         :class="router.currentRoute.value.path == '/damagedProducts' && 'active'"
@@ -113,9 +113,9 @@ function toggleDropdown(event: any) {
         <i class="menuIcon iconHistory"></i>
         <p>Истории</p>
       </RouterLink>
-    </li>
+    </li> -->
     <!-- <<<<<<<< roles >>>>>>>>>>> -->
-    <li class="menuItem">
+    <!-- <li class="menuItem">
       <RouterLink
         class="menuLink"
         :class="router.currentRoute.value.path == '/roles' && 'active'"
@@ -127,7 +127,7 @@ function toggleDropdown(event: any) {
         <i class="menuIcon iconRole"></i>
         <p>Роли</p>
       </RouterLink>
-    </li>
+    </li> -->
     <!-- <<<<<<<< Customers >>>>>>>>>>> -->
     <!-- <li class="menuItem">
       <RouterLink
@@ -460,12 +460,12 @@ function toggleDropdown(event: any) {
   transform: rotate(0deg);
 }
 
-body.sideBarClose .menu > li:nth-child(4),
+/* body.sideBarClose .menu > li:nth-child(4),
 body.sideBarClose .menu > li:nth-child(6),
 body.sideBarClose .menu > li:nth-child(7),
 body.sideBarClose .menu > li:nth-child(8) {
   display: none;
-}
+} */
 
 body.sideBarClose .menuItem {
   max-width: 44px;
@@ -565,18 +565,58 @@ body.sideBarClose .subMenuToolTip li a.active {
   .menu {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-radius: 40px;
     background: rgba(245, 245, 245, 0.5);
     backdrop-filter: blur(20px);
     margin-bottom: 15px;
+    padding: 10px 20px;
     z-index: 1;
   }
 
+ .menuItem {
+        width:10%;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px !important;
+    }
+
+    .menuLink {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 0;
+    }
+
+    .menuIcon {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        margin-right: 0px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .menuItem > .menuLink > p {
+        color: #444;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+  
   .cursor-pointer {
     display: none;
   }
-  .menuItem {
+  /* .menuItem {
     width: 25%;
     padding: 20px;
     display: flex;
@@ -592,26 +632,26 @@ body.sideBarClose .subMenuToolTip li a.active {
     justify-content: center;
     gap: 8px;
     margin-bottom: 0;
-  }
+  } */
 
-  .menuIcon {
+  /* .menuIcon {
     display: flex;
     width: 30px;
     height: 30px;
-    padding: 3.5px 3.507px;
+    padding: 3.5px 3.507px; */
     /* padding: 3.395px 2.628px 3.628px 2.872px; */
-    margin-right: 0px;
+    /* margin-right: 0px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-  }
+  } */
 
   .iconHome {
     width: 27px;
     height: 29px;
   }
 
-  .menuItem > .menuLink > p {
+  /* .menuItem > .menuLink > p {
     color: #444;
     text-align: center;
     font-family: "Inter";
@@ -619,10 +659,10 @@ body.sideBarClose .subMenuToolTip li a.active {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-  }
+  } */
 
   body.sideBarClose .menuLink > p {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .menuLink:hover,

@@ -66,14 +66,14 @@ body.sideBarClose .content {
 
   .content {
     position: relative;
-    margin-left: 0px;
+    margin-left: 0px!important;
     padding: 75px 20px 20px;
     transition: all 0.2s linear;
     z-index:auto;
   }
 
   body.sideBarClose .content {
-    margin-left: 0px;
+    margin-left: 0px!important;
   }
 
   .downMenuContainer {
